@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Other STEM research resources</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Graciela Carrillo   S&amp;E Tutor" />
+    <meta name="date" content="2019-12-04" />
+    <script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+    <script src="libs/jquery-1.12.4/jquery.min.js"></script>
+    <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-1.3.1/leaflet.js"></script>
+    <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+    <script src="libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+    <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding-2.0.3/leaflet.js"></script>
+    <link rel="stylesheet" href="for_xaringan.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Other STEM research resources
+## Data Science with Python &amp; R
+### Graciela Carrillo<br /> <br />S&amp;E Tutor
+### PM 617 Researcher Development
+### 2019-12-04
+
+---
+
+
+
+
+class: center, middle
+
+# STEM students, meet Data Science `*`
+
+&lt;br/&gt;
+&lt;img src="https://github.com/gracecarrillo/KAPLAN_PM-617/blob/master/The-Pi-shaped-researcher.jpg?raw=true" alt="T-shaped and Pi-shaped researcher"&gt;
+
+## **The T and “p-shaped researcher.” This meme-like formulation circulates widely within data science discussions.**
+&lt;br/&gt;
+
+.footnote[[*] Ribes, D.(2018). STS, Meet Data Science, Once Again. Science, Technology &amp; Human Values,DOI: 10.1177/0162243918798899, License CC BY-NC 4.0.]
+
+---
+class: center, middle
+
+# Data Science
+
+## Extraction of knowledge from large amounts of various forms of data. 
+
+## Computer science + statistics + analytics + mathematics + **any field knowledge!**. 
+
+## Demand for data scientists and data engineers has more than tripled over five years (+231%)`*`
+
+&lt;img src="https://github.com/gracecarrillo/KAPLAN_PM-617/blob/master/Data_Science.png?raw=true" alt="Data Science" width= 50% height=40%&gt;
+
+.footnote[[*] https://royalsociety.org/news/2019/05/data-science-skills-shortages/]
+
+---
+class: center, middle
+
+# What are Python and R?
+
+## Python is a more traditional programming language
+
+## R was originally designed for statistics but has branched out into a more general-purpose language
+  
+&lt;img src="https://github.com/gracecarrillo/KAPLAN_PM-617/blob/master/R_Python.png?raw=true" alt="Data Science" width= 40% height=20%&gt;
+
+---
+class: center, middle
+
+# Python and R – the Similarities
+
+## Both Python and R are used for:
+
+## Loading data
+
+
+```r
+knitr::kable(head(iris), format = 'html')
+```
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Species &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.6 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; setosa &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+class: center, middle
+
+## Geospatial Analysis
+  
+### This is my city!!
+
+
+```r
+library(leaflet)
+leaflet() %&gt;% addTiles() %&gt;% setView(-89.6169586, 20.9753704, zoom = 12)
+```
+
+<div id="htmlwidget-ecf230476dd4ad0e5ffb" style="width:100%;height:432px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ecf230476dd4ad0e5ffb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]}],"setView":[[20.9753704,-89.6169586],12,[]]},"evals":[],"jsHooks":[]}</script>
+
+
+---
+class: center, middle
+
+## Doing (very cool) visualisations (with R)
+
+The following map shows where surfers travel based on their twitter activity. Thousands of tweets containing #surf have been recovered and geocoded. Home and current locations are represented using great circles, using R
+
+&lt;img src="https://www.r-graph-gallery.com/img/graph/Surfer_travel.png" alt="Dataviz" width= 100% height=100%&gt;
+
+---
+class: center, middle
+### More cool visualisations (with R)
+
+
+```
+## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
+```
+
+![](Other-STEM-Resources_files/figure-html/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+
+---
+class: center, middle
+
+## Graphing (with Python)
+
+Scatterplot on polar axis: Size increases radially in this example and color increases with angle (just to verify the symbols are being scattered correctly). `*`
+
+&lt;img src="Other-STEM-Resources_files/figure-html/unnamed-chunk-4-1.png" width="480" /&gt;
+
+.footnote[[*]https://matplotlib.org/3.1.1/gallery/pie_and_polar_charts/polar_scatter.html#sphx-glr-gallery-pie-and-polar-charts-polar-scatter-py]
+
+---
+## Prediction
+
+
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+
+columns = ['carat', 'cut', 'price']
+
+data = [[0.3, 'Ideal', 422],
+        [0.31, 'Ideal', 489],
+        [0.42, 'Premium', 737],
+        [0.5, 'Ideal', 1415],
+        [0.51, 'Premium', 1177],
+        [0.7, 'Fair', 1865],
+        [0.73, 'Fair', 2351],
+        [1.01, 'Good', 3768],
+        [1.18, 'Very Good', 3965],
+        [1.18, 'Ideal', 4838]]
+
+train = pd.DataFrame(data=data, columns=columns)
+
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(train[features], train[target])
+predictions = model.predict(carats)
+```
+
+
+$$ y = mx + b $$
+
+$$ price = 4,627*carat - 1,062 $$
+
+---
+class: center, middle
+
+# The Case for Python
+
+## Python is a general purpose programming language 
+
+## It is used for software development as well as data science
+
+## *MACHINE LEARNING!!*
+
+&lt;img src="https://github.com/gracecarrillo/KAPLAN_PM-617/blob/master/machine_learning.jpg?raw=true" alt="" width= 50% height=40%&gt;
+
+
+---
+class: center, middle
+
+# The Case for R
+
+## R was developed in academia for use in STEM subjects
+
+## It was originally used for building statistics packages and visualizations for researchers
+
+## There are a huge number of statistical packages available in R (more than in Python, though Python is catching up)
+
+&lt;img src="https://github.com/gracecarrillo/KAPLAN_PM-617/blob/master/choose_R.png?raw=true" alt="" width= 50% height=40%&gt;
+
+
+---
+
+class: center, middle
+
+## Now data scientists can combine both Python and R for a wider range of capabilities `*`
+
+&lt;img src="https://miro.medium.com/max/1199/0*b98l_xo8HckWIOIJ." width= 100% height=100%&gt;
+
+.footnote[*[Image Source: https://dzone.com/articles/r-or-python-data-scientists-delight]]
+---
+class: center, left
+
+# Python and R Developers in the Real World
+
+## In the 1990s: Companies previously did not use R in production. Original R statistics packages were developed for individual researchers, not teams
+
+## Today: Software and data science has progressed to be team based
+
+## Data scientists share code on GitHub 
+
+## Data scientists push insights into production
+
+## Easier to collaborate in Python than in R, but lots of things are still being done in R by talented programmers.
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
